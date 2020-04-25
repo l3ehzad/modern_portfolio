@@ -1,0 +1,35 @@
+// this file is "partial" and should be started with _""
+// this includes all the variables and @mixin (methods)
+
+$primary-color: #444;
+$secondary-color: #eea41a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
+
+@mixin easeOut {
+    transition: all 1s ease-out;            //anywhere a transition needed, we can use this method   
+}
+
+@mixin background {
+    @if $show-home-image {                  // use if statement in css
+        &#bg-img {           //it's gonna work bcaz later it will be used in body and there it makes sense. 
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;          //to show image fullscreen
+
+            //.overlay{           //we don't use "&.overlay" bcaz it's directly subclass
+                //we can remove .overlay and instead of it using the following pseudo
+            &:after{     //pseudo element (like pre defined methods)
+                content: '';        //have to be added with "&:after"
+                position: absolute ;         //to cover whole body
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;            //to push the layer in background so we see text on top of it.
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
