@@ -52,7 +52,7 @@
        visibility: visible; 
     }
 
-    .menu-branding, &-nav{            // .menu-branding = &-branding{} ->it adds "-branding" at the end of parent class name. 
+    &-branding, &-nav{            // .menu-branding = &-branding{} ->it adds "-branding" at the end of parent class name. [dar amal farq mikone. dorostesh &-branding hast!!]
         display: flex;
         flex-flow: column wrap;       // it makes them as colums not rows
         align-items: center;

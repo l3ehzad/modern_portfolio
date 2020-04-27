@@ -1,0 +1,58 @@
+//any time creating new file we run 'npm run sass' in terminal
+
+//Widescreens
+@include mediaXl{
+
+}
+
+//Desktop & Laptops
+@include mediaLg{
+
+}
+
+//Tablets & Small Laptops
+@include mediaMd{
+    main{                        //main tag: the main{} which is defined in main.scss
+        align-items: center;
+        text-align: center;
+        
+        .lg-heading{                //class which is defined in main.scss
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav, div.menu-branding{
+        float: none;                //before they are floated to left and right in the menu. With this we put them under each other.
+        width: 100%;
+        min-height: 0;
+
+        &.show{
+            //transform: translate3d(0,0,0);              //++this just turn on translate3D, we'll define it later by giving it numbers
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size: 24px;
+    }
+
+    .menu-branding{
+        height: 25vh;
+        transform: translate3d(100%,0,0); 
+
+        .portrait {
+            background: url(../img/portrait_small.jpg);
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+//Smartphones
+@include mediaSm{
+    main#home h1 {          //in main tag in home ID (look at mian.scss)
+        margin-top: 10vh;
+    }
+}
