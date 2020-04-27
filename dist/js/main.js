@@ -6,7 +6,7 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 // define s.th. like an array for the items in the menu
-const navItems = document.querySelectorAll('nav-item');
+const navItems = document.querySelectorAll('.nav-item');
 
 // Set initial state of menu
 let showMenu = false;           //let is opposite of const -> can be redefined many times. 
@@ -20,7 +20,7 @@ function toggleMenu(){
         menuNav.classList.add('show');
         menuBranding.classList.add('show');
         navItems.forEach(item => item.classList.add('show'));   
-//XXX WHERE TO DEFINE 'SHOW' OR 'CLOSE'?
+//show and close are the methods which adds/removes to the available classes. close and show will be defined in css file.
         //Set Menu State
         showMenu = true;
     } else {
