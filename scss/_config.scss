@@ -34,10 +34,19 @@ $background-opacity: 0.7;
     }
 }
 
+// set text color: if it's hell -> set text as black. If it's dark -> set text as white.
+@function set-text-color($color){
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 //Media query mixins
 @mixin mediaSm {
     @media screen and (max-width: 500px){       //anything we put here would be for this size
-        @content;
+        @content;                               // is predefined to add stuff or content to it later
     }
 }
 

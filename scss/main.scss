@@ -1,7 +1,7 @@
 
 @import 'config';   //importing config data w/o "_"
 @import 'menu';
-@import 'mobile';
+//@import 'mobile';    -> should be added at the bottom of the main to be run after initial scss.
 
 // set something for everything as follows
 * {
@@ -11,7 +11,7 @@
 body{
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,7 +53,8 @@ header{
 
 main{
     padding: 4rem;
-    height: 100%;
+    //height: 100%;
+    min-height: calc(100vh - 60px);     //using this instead of height:100%; causes the @Copyright text always stick to bottom of the page. (100vh= the whole height - 60px= height of @copyright text)
 
     .icons{                         //".icons" because it's a subclass
         margin-top: 1rem;
@@ -77,4 +78,51 @@ main{
     }
 }
 
- 
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3'; //bio part on top has 3 parts [image, bio title, bio text] + 3 colums or parts for jobs
+    grid-template-columns: repeat(3, fr);           //the same as 1fr 1fr 1fr;
+
+    .bio-image{
+        grid-area: bioimage;        //the name is the same as what we put in -> grid-template-areas: 'bioimage';
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+    
+    .bio{
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+    
+    .job-1{
+        grid-area: job1;
+    }
+    
+    .job-2{
+        grid-area: job2;
+    }
+    
+    .job-3{
+        grid-area: job3;
+    }
+    
+    .job{
+        background: lighten($primary-color, 5);     //the amount to be lightened
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import 'mobile';           //should be run after initial scss ... XXX idk why! at the top would get errors!
+
+
