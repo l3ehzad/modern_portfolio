@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <!--<div class="overlay"></div>          new layer to put on background later to be readable -->
+    <!-- instad of using overlay class we can use $:after inside css -->
+    <header>
+        <!--for 3line menu on the top right of page: .btn-line*3 -->
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <!-- Menu(after clicking on the 3line bar menu) -->
+        <nav class="menu">
+            <!-- left side of menu: which has portrait -->
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <!-- right side of menu: has items -->
+            <ul class="menu-nav">
+                <!-- this has 2 class names that we can refer to. nav-item and current -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item current">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>                
+            </ul>
+        </nav>
+    </header>
+    <main id="contact">
+        <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
+        <h2 class="sm-heading">This is how you can reach me...</h2>
+        <div class="boxes">
+            <div>
+                <span class="text-secondary">Email:</span> infor@l3ehzad.de
+            </div>
+            <div>
+                <span class="text-secondary">Phone:</span> 555-555 555
+            </div>
+            <div>
+                <span class="text-secondary">Address:</span> Hauptstr. 11, 111 Hauptstadt
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="main-footer">
+        Copyright &copy; 2020
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

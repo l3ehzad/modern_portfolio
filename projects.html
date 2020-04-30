@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View My Work</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <!--<div class="overlay"></div>          new layer to put on background later to be readable -->
+    <!-- instad of using overlay class we can use $:after inside css -->
+    <header>
+        <!--for 3line menu on the top right of page: .btn-line*3 -->
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <!-- Menu(after clicking on the 3line bar menu) -->
+        <nav class="menu">
+            <!-- left side of menu: which has portrait -->
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <!-- right side of menu: has items -->
+            <ul class="menu-nav">
+                <!-- this has 2 class names that we can refer to. nav-item and current -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item current">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>                
+            </ul>
+        </nav>
+    </header>
+    <main id="about">
+        <h1 class="lg-heading">My <span class="text-secondary">Projects</span></h1>
+        <h2 class="sm-heading">Check out some of my projects ...</h2>
+        <div class="project-info">
+            <!-- Project1 -->
+            <div class="item">            
+                <a href="#!">                   <!-- XXXX WHHAT IS "#!" ? -->
+                    <img src="img/projects/project1.jpg" alt="Project">
+                </a>
+                <a href="#" class="btn-light">
+                    <i class="fas fa-eye"></i> Project
+                </a>
+                <a href="#" class="btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>
+            <!-- Project2 -->    
+            </div>
+            <div class="item">            
+                <a href="#!">                  
+                    <img src="img/projects/project2.jpg" alt="Project">
+                </a>
+                <a href="#" class="btn-light">
+                    <i class="fas fa-eye"></i> Project
+                </a>
+                <a href="#" class="btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>
+            <!-- Project3 -->    
+            </div>
+            <div class="item">            
+                <a href="#!">                   
+                    <img src="img/projects/project3.jpg" alt="Project">
+                </a>
+                <a href="#" class="btn-light">
+                    <i class="fas fa-eye"></i> Project
+                </a>
+                <a href="#" class="btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>
+            <!-- Project4 -->    
+            </div>
+            <div class="item">            
+                <a href="#!">                   
+                    <img src="img/projects/project4.jpg" alt="Project">
+                </a>
+                <a href="#" class="btn-light">
+                    <i class="fas fa-eye"></i> Project
+                </a>
+                <a href="#" class="btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>
+            <!-- Project5 -->    
+            </div>
+            <div class="item">            
+                <a href="#!">                   
+                    <img src="img/projects/project5.jpg" alt="Project">
+                </a>
+                <a href="#" class="btn-light">
+                    <i class="fas fa-eye"></i> Project
+                </a>
+                <a href="#" class="btn-dark">
+                    <i class="fab fa-github"></i> Github
+                </a>
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="main-footer">
+        Copyright &copy; 2020
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
